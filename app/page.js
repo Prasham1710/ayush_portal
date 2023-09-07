@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import LoginForm from './components/LoginForm'
+import Dash from './components/Dash'
 import { getServerSession } from "next-auth";
 
 import { authOptions } from "./api/auth/[...nextauth]/route";
@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <main>
-      <LoginForm />
+      <Dash />
     </main>
   );
 }

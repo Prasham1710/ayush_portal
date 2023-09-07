@@ -42,41 +42,9 @@ export default function MyApp() {
                   class="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
                 >
                   {box1 ? (
-                    <svg
-                      role="button"
-                      aria-label="close dropdown"
-                      width="12"
-                      height="17"
-                      viewBox="1 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 3h8"
-                        stroke="#4B5563"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+                    <AiOutlineMinus />
                   ) : (
-                    <svg
-                      role="button"
-                      aria-label="open dropdown"
-                      width="12"
-                      height="17"
-                      viewBox="1 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 3h10M5 0v6"
-                        stroke="#4B5563"
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+                    <AiOutlinePlus />
                   )}
                 </button>
               </div>
