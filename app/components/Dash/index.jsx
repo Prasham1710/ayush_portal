@@ -12,12 +12,12 @@ const index = () => {
           <button className='hover:text-[#DFFFD8] mx-2 text-[#FFF9DE] font-bold'>Register</button></div>
           
         </div>
-        <div className='pt-10 text-center font-extrabold text-5xl text-[#96C291]   
+        <div className='pt-8 text-center font-extrabold text-5xl text-[#96C291]   
 '>
   <span className='relative before:absolute before:inset-0 before:bg-[#A6D0DD]
 before:animate-typewriter'>Aayush -  HealthCare Organisation</span></div>
       <div className='flex gap-40'>
-    <div className='mt-16 ml-20'>
+    <div className='mt-28 ml-20 animate-bounce'>
 
     
     <Image
@@ -37,7 +37,7 @@ before:animate-typewriter'>Aayush -  HealthCare Organisation</span></div>
     </div>
     
       </div>
-      <div className='m-14 text-xl font-bold text-[#A2C579]'><span className='relative before:absolute before:inset-0 before:bg-[#A6D0DD]
+      <div className='mx-14 my-4 text-xl font-bold text-[#A2C579]'><span className='relative before:absolute before:inset-0 before:bg-[#A6D0DD]
 before:animate-typewriter'>Platform that helps you showcase your talent and get mentorship and resources and information in a  collaborative environment .</span>
 <h1 className=' relative before:absolute before:inset-0 before:bg-[#A6D0DD]
 before:animate-typewriter'> Provides you with facilities like Global Networking .</h1>
