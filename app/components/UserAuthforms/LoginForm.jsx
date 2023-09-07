@@ -32,7 +32,7 @@ const handleSubmit = async (e) => {
     }
   };
 
-return (<div className="grid place-items-center h-screen">
+return (<div className="grid ">
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
         <h1 className="text-xl font-bold my-4">Login</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
