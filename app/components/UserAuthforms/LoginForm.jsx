@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import {AiOutlineMail} from "react-icons/ai"
 import {RiLockPasswordLine} from "react-icons/ri"
 import {PiShootingStar} from "react-icons/pi"
+import { toast } from "react-hot-toast";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -25,10 +26,12 @@ const handleSubmit = async (e) => {
       });
 
       if (res.error) {
-        setError("Invalid Credentials");
+        toast.error("Invalid Credentials");
         return;
       }
-
+      else {  
+        toast.success("Login Successful");
+      }
       router.replace("dashboard");
     } catch (error) {
       console.log(error);
@@ -85,7 +88,7 @@ return (<div className="grid place-items-center h-screen bg-gradient-to-r from-v
           <button  className="bg-blue-400 text-white font-bold cursor-pointer px-6 py-2 hover:bg-violet-700">Login</button>
           {error && (
           <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
-              Error Message
+              {error}
             </div>
              )}
             <Link className="text-sm mt-3 text-right" href={"/register"}>
