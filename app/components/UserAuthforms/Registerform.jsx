@@ -6,6 +6,7 @@ import {AiOutlineMail} from "react-icons/ai"
 import {RiLockPasswordLine} from "react-icons/ri"
 import {PiShootingStar} from "react-icons/pi"
 import {BsPerson} from 'react-icons/bs'
+import { toast } from "react-hot-toast"
 
 export default function RegisterForm() {
   
@@ -18,7 +19,7 @@ const handleSubmit = async(e) => {
     e.preventDefault();
 
       if (!name || !email || !password) {
-      setError("All fields are necessary.");
+      toast.error("All fields are necessary.");
       return;
     }
     
@@ -34,7 +35,7 @@ const handleSubmit = async(e) => {
       const{user} = await resUserExists.json();
 
         if (user) {
-            setError("User already exists.");
+            toast.error("User already exists.");
             return;
         }
         const res = await fetch("api/register", {
@@ -50,6 +51,7 @@ const handleSubmit = async(e) => {
       });
          if (res.ok) {
         const form = e.target;
+        toast.success("susscesfully registered")
         form.reset();
         router.push("/");
         }
@@ -93,7 +95,7 @@ return   (
 <input 
           className="peer w-[400px] border border-gray-200 py-2 px-10 bg-zinc-100/40  placeholder-transparent" 
           type="email" 
-
+          onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
           />
 <span

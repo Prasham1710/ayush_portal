@@ -6,6 +6,7 @@ import {AiOutlineMail} from "react-icons/ai"
 import {RiLockPasswordLine} from "react-icons/ri"
 import {PiShootingStar} from "react-icons/pi"
 import {BsPerson} from 'react-icons/bs'
+import { toast } from "react-hot-toast";
 
 export default function InRegisterForm() {
 
@@ -32,7 +33,7 @@ const handleSubmit = async(e) => {
                 });
         const{inuser} = await resInUserExists.json();
         if (inuser) {
-          setError("InUser already exists.");
+          toast.error("InUser already exists.");
           return;
         }
          const res = await fetch('api/inregister', {

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import {AiOutlineMail} from "react-icons/ai"
 import {RiLockPasswordLine} from "react-icons/ri"
 import {PiShootingStar} from "react-icons/pi"
+import { toast } from "react-hot-toast";
 
 
 export default function InLoginForm() {
@@ -19,7 +20,7 @@ export default function InLoginForm() {
       const res = await signIn
       ("credentials", {email, password, redirect: false});
       if (res.error) {
-        setError("Invalid Credentiols")
+        toast.error("Invalid Credentiols")
       }
       router.replace("dashboard");
     } catch (error) {
