@@ -15,16 +15,12 @@ export default function MyApp() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <img
-          src="https://i.ibb.co/DQ4FZhL/pattern-bg.png"
-          alt="blue pattern background"
-          class="absolute w-full h-64 md:h-96 object-center object-fit z-0"
-        />
+       
         <div class="relative flex flex-col items-center justify-center sm:px-0 px-6 z-20 pb-32">
           <div class="md:py-36 py-20">
             <h1
               role="heading"
-              class="xl:text-6xl md:text-5xl text-xl font-bold leading-10 text-white"
+              class="xl:text-6xl md:text-5xl text-xl font-bold leading-10 text-black"
             >
               Frequently asked questions
             </h1>
