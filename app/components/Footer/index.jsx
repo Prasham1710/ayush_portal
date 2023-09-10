@@ -5,11 +5,12 @@ import { GiCrossMark } from "react-icons/gi";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
 
 export default function Footer() {
   return (
     <div className="w-full">
-      <footer className="px-20 divide-y dark:bg-[#2a2a2a] dark:text-gray-100">
+      <footer className="px-20 divide-y bg-[#230345] text-gray-100">
         <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/4">
             <ul>
@@ -127,6 +128,19 @@ export default function Footer() {
           © 2023 Company Co. All rights reserved.
         </div>
       </footer>
+      <div className='flex justify-center py-4 bg-[#230345]'>
+            <Link href='/'>
+            
+              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 bg-blue-300'>
+                <HiOutlineChevronDoubleUp
+                  className='text-[#fcfcfd] '
+                  size={30}
+                  
+                />
+              </div>
+            
+          </Link>
+        </div>
     </div>
   );
 }
