@@ -20,7 +20,9 @@ export default function InLoginForm() {
       const res = await signIn
       ("credentials", {email, password, redirect: false});
       if (res.error) {
-        toast.error("Invalid Credentiols")
+        toast.error("Invalid Credentiols");
+      } else {
+        toast.success("Login Successful");
       }
       router.replace("dashboard");
     } catch (error) {
