@@ -13,6 +13,7 @@ export default function RegisterForm() {
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
+const role= "user"
 const [error, setError] = useState("");
  const router = useRouter();
 const handleSubmit = async(e) => {
@@ -24,20 +25,6 @@ const handleSubmit = async(e) => {
     }
     
     try {
-        const resUserExists = await fetch("api/userExists", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const{user} = await resUserExists.json();
-
-        if (user) {
-            toast.error("User already exists.");
-            return;
-        }
         const res = await fetch("api/register", {
         method: "POST",
         headers: {
@@ -47,6 +34,7 @@ const handleSubmit = async(e) => {
           name,
           email,
           password,
+          role
         }),
       });
          if (res.ok) {
@@ -68,7 +56,7 @@ return   (
   
   <div className="shadow-lg p-5 rounded-lg border-4 border-black bg-white">
     <div className="flex  gap-4"><div className="pl-28 pt-4"><PiShootingStar  size={36}/></div>
-    <div className="text-3xl font-bold my-4 text-center">Register</div></div>
+    <div className="text-3xl font-bold my-4 text-center">startup Register</div></div>
 
         <form  onSubmit={handleSubmit} className="flex flex-col gap-3">
         <div className="relative">

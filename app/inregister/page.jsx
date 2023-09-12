@@ -6,7 +6,6 @@ export default  async function InRegister()
 {
   const session = await getServerSession(authOptions);
 
-  if (session) redirect("/dashboard");
 
   return <InRegisterForm />;
 }

@@ -12,11 +12,11 @@ export default function dashboard() {
   const { data: session } = useSession();
   const router = useRouter();
   const role=session?.user?.role
-  if (role==="user") 
+  if (role==="investor") 
   return (
     <div className="bg-gradient-to-r from-[#25244d] via-[#4f4e9c] via-[#6967c2] to-[#25244d]">
       <div>
-        dashbaord
+        indashbaord
         <Navbar />
       </div>
       <div >
