@@ -97,7 +97,7 @@ return (<div className="grid place-items-center h-screen bg-gradient-to-r from-v
               {error}
             </div>
              )}
-            <Link className="text-sm mt-3 text-right" href={"/register"}>
+            <Link className="text-sm mt-3 text-right" href={"/inregister"}>
             Don't have an account? <span className="underline hover:text-violet-500">Register</span>
           </Link>
           </form>
