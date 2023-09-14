@@ -25,13 +25,14 @@ const handleSubmit = async (e) => {
         redirect: false,
       });
 
-      if (res.status === 400) {
+      if (res.error) {
+        console.log(error)
         toast.error("Invalid Credentials");
         return;
       }
-      if(res.status === 200){  
+      else{  
 
-
+        console.log(res)
 
         toast.success("Log Successful");
 router.push("/director");
