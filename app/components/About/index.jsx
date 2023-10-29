@@ -2,7 +2,11 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div>index</div>
+    <div className='w-screen h-screen'>
+        <div>
+            
+        </div>
+    </div>
   )
 }
 
