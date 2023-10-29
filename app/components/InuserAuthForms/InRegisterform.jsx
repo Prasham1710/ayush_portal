@@ -13,7 +13,7 @@ export default function RegisterForm() {
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
-const role= "user"
+const role= "investor"
 const [error, setError] = useState("");
  const router = useRouter();
 const handleSubmit = async(e) => {
@@ -56,7 +56,7 @@ return   (
   
   <div className="shadow-lg p-5 rounded-lg border-4 border-black bg-white">
     <div className="flex  gap-4"><div className="pl-28 pt-4"><PiShootingStar  size={36}/></div>
-    <div className="text-3xl font-bold my-4 text-center">startup Register</div></div>
+    <div className="text-3xl font-bold my-4 text-center">Investor Register</div></div>
 
         <form  onSubmit={handleSubmit} className="flex flex-col gap-3">
         <div className="relative">

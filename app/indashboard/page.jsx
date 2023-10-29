@@ -7,18 +7,16 @@ import Footer from "../components/Footer";
 import Faq from "../components/Faq";
 import Number from "../components/Number"
 import Cards from "../components/cards";
-import About from "../components/About";
-import Description from "../components/Description";
 import { useSession } from "next-auth/react";
 export default function dashboard() {
   const { data: session } = useSession();
   const router = useRouter();
   const role=session?.user?.role
-  if (role==="user") 
+  if (role==="investor") 
   return (
     <div className="bg-gradient-to-r from-[#25244d] via-[#4f4e9c] via-[#6967c2] to-[#25244d]">
       <div>
-        dashbaord
+        indashbaord
         <Navbar />
       </div>
       <div >
@@ -28,8 +26,6 @@ export default function dashboard() {
       </div>
       <div>
         <Faq/>
-        <Description />
-        <About />
       </div>
       <div>
         <Footer/>

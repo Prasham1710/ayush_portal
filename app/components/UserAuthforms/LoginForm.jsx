@@ -26,13 +26,19 @@ const handleSubmit = async (e) => {
       });
 
       if (res.error) {
+        console.log(error)
         toast.error("Invalid Credentials");
         return;
       }
-      else {  
-        toast.success("Login Successful");
+      else{  
+
+        console.log(res)
+
+        toast.success("Log Successful");
+router.push("/director");
+        
       }
-      router.replace("dashboard");
+      
     } catch (error) {
       console.log(error);
     }
@@ -91,7 +97,7 @@ return (<div className="grid place-items-center h-screen bg-gradient-to-r from-v
               {error}
             </div>
              )}
-            <Link className="text-sm mt-3 text-right" href={"/register"}>
+            <Link className="text-sm mt-3 text-right" href={"/inregister"}>
             Don't have an account? <span className="underline hover:text-violet-500">Register</span>
           </Link>
           </form>
